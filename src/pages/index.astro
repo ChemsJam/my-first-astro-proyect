@@ -1,5 +1,6 @@
 ---
-
+import Card from "../components/Card.astro";
+import HelloComponent from "../components/HelloComponent.jsx"
 ---
 
 <html lang="en">
@@ -9,8 +10,23 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+
+		<style>
+			body{
+				color: white;
+				background-color: black;
+			
+			}
+		</style>
+
 	</head>
 	<body>
 		<h1>Astro</h1>
+
+		<Card title="Card1" text ="card text 1"/>
+		<Card title="Card2" text ="card text 2"/>
+		<Card title="Card3" text ="card text 3"/>
+		<Card title="Card4" text ="card text 4"/>
+		<HelloComponent  client:load/>
 	</body>
 </html>
